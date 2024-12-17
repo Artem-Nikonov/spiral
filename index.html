@@ -31,8 +31,10 @@
       Telegram.WebApp.requestFullscreen();
       Telegram.WebApp.lockOrientation();
     }
+    
     fetch("https://allgames.1064953-ci72340.tmweb.ru/api/v1/Auth", {
       method: "POST",
+      credentials: 'include',
       body: Telegram.WebApp.initData,
     })
       .then((resp) => {
