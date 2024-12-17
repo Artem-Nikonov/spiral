@@ -32,19 +32,19 @@
       Telegram.WebApp.lockOrientation();
     }
     
-    // fetch("https://allgames.1064953-ci72340.tmweb.ru/api/v1/Auth", {
-    //   method: "POST",
-    //   credentials: 'include',
-    //   body: Telegram.WebApp.initData,
-    // })
-    //   .then((resp) => {
-    //     if (resp.status == 200) {
-    //       console.log("auth success");
-    //     } else {
-    //       alert("Server error: " + resp.status);
-    //     }
-    //   })
-    //   .catch((ex) => alert(ex));
+    fetch("https://allgames.1064953-ci72340.tmweb.ru/api/v1/Auth", {
+      method: "POST",
+      credentials: 'include',
+      body: Telegram.WebApp.initData,
+    })
+      .then((resp) => {
+        if (resp.status == 200) {
+          console.log("auth success");
+        } else {
+          alert("Server error: " + resp.status);
+        }
+      })
+      .catch((ex) => alert(ex));
     var container = document.querySelector("#unity-container");
     var canvas = document.querySelector("#unity-canvas");
     var loadingBar = document.querySelector("#unity-loading-bar");
