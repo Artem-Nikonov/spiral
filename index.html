@@ -128,7 +128,7 @@
       }).then((unityInstance) => {
         loadingBar.style.display = "none";
           unityInstance.SetFullscreen(1);
-          unityInstance.SendMessage('Server', 'Auth', JSON.stringify({ initData: decodeURIComponent(Telegram.WebApp.initData), startParam: window.Telegram.WebApp.initDataUnsafe.start_param }));
+          unityInstance.SendMessage('Server', 'Auth', JSON.stringify({ initData: Telegram.WebApp.initData, startParam: window.Telegram.WebApp.initDataUnsafe.start_param }));
       }).catch((message) => {
         alert(message);
       });
