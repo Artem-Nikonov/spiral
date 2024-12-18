@@ -45,6 +45,18 @@
         document.body.style.textAlign = "left";
       }
 
+      var buildUrl = "Build";
+    var loaderUrl = buildUrl + "/spiral.loader.js";
+    var config = {
+      dataUrl: buildUrl + "/spiral.data",
+      frameworkUrl: buildUrl + "/spiral.framework.js",
+      codeUrl: buildUrl + "/spiral.wasm",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "DefaultCompany",
+      productName: "Spinner",
+      productVersion: "0.1",
+      showBanner: unityShowBanner,
+    };
       createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/spiral.data",
         frameworkUrl: "Build/spiral.framework.js",
