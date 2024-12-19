@@ -28,7 +28,7 @@
       XMLHttpRequest.prototype.originalOpen = XMLHttpRequest.prototype.open;  
       var newOpen = function(_, url) {  
         var original = this.originalOpen.apply(this, arguments);  
-        if (url.indexOf('https://artem-nikonov.github.io') === 0) {  
+        if (url.indexOf('https://allgames.1064953-ci72340.tmweb.ru') === 0) {  
           this.withCredentials = true;  
         }  
      
