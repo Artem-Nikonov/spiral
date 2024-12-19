@@ -24,6 +24,18 @@
         <div id="unity-build-title">Spinner</div>
       </div>
     </div>
+    <script>  
+      XMLHttpRequest.prototype.originalOpen = XMLHttpRequest.prototype.open;  
+      var newOpen = function(_, url) {  
+        var original = this.originalOpen.apply(this, arguments);  
+        if (url.indexOf('https://artem-nikonov.github.io') === 0) {  
+          this.withCredentials = true;  
+        }  
+     
+        return original;  
+      }  
+      XMLHttpRequest.prototype.open = newOpen;  
+    </script>
     <script>
       if (Telegram.WebApp.version == '8.0' || Telegram.WebApp.version >= 8.0) {
         Telegram.WebApp.requestFullscreen();
